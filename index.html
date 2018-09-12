@@ -6,7 +6,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
-    <script src='./data2.js'></script>
+    <script src='./data1.js'></script>
     
     <style>
         body { margin:0; padding:0; }
@@ -14,8 +14,7 @@
     </style>
 </head>
 <body>
-
-        <div id='map' ></div>
+       <div id='map' ></div>
         <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoiaWNlZnoiLCJhIjoiY2psb2d0cjRzMXRtcDN2bW42NmQwNnRvdiJ9.i3CFSB3YBUURnf076XU1rg';
             var map = new mapboxgl.Map({
@@ -32,29 +31,27 @@
                     "type": "fill-extrusion",
                     "source": {
                         'type': 'geojson',
-                        'data': data2
+                        'data': data1
                     },
                        'paint': {
                             'fill-extrusion-color' : {
-                                'property': 'JIANFAN2',
+                                'property': 'nvf2',
                                 "stops":[
-                                    [0,'white'],
-                                    [1, 'green'],
-                                    [2, 'orange']
-                                   ]
-
-                                    
+                                    [0, 'pink'],
+                                    [5, 'brown'],
+                                    [12,'gray'],
+                                    [22,'green'],
+                                    [51,'purple'],
+                                    [108,'blue'],
                                   
-                                
+                                ]
                                 
                             },
                             'fill-extrusion-height' : {
-                                'property': 'JIANFAN1',
+                                'property': 'nvf1',
                                 "stops":[
                                     [0.2,2000],
-                                    [100, 50000]
-                                    
-                                    
+                                    [70, 50000]
                                 ]
                             },
                              'fill-extrusion-opacity': 1
@@ -65,4 +62,3 @@
                                         
 </body>
 </html>
-
